@@ -1,0 +1,97 @@
+
+.login{
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(50% - 50px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+}
+
+.login input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(55, 202, 55, 0.6);
+	border-radius: 2px;
+	color: rgb(53, 58, 48);
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.login input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(45, 192, 0, 0.9);
+	border-radius: 2px;
+	color: rgb(103, 116, 88);
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.login input[type=submit]{
+	width: 260px;
+	height: 35px;
+	background: rgb(40, 191, 202);
+	border: 1px solid rgb(113, 235, 14);
+	cursor: pointer;
+	border-radius: 2px;
+	color: #000;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.login input[type=submit]:hover{
+	opacity: 0.8;
+}
+
+.login input[type=submit]:active{
+	opacity: 0.6;
+}
+
+.login input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(33, 187, 33, 0.9);
+}
+
+.login input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(45, 192, 0, 0.9);
+}
+
+.login input[type=submit]:focus{
+	outline: none;
+}
+
+::-webkit-input-placeholder{
+   color: rgba(97, 62, 84, 0.9);
+}
+
+::-moz-input-placeholder{
+   color: rgba(97, 82, 62, 0.9);
+}
+
+h3 {
+	
+	color:rgb(0, 0, 0)
+}
+
+#title table th{
+	color: black;
+	width: 120px;
+	border-style:double double double double;
+}
+
+h5 {
+	color: rgb(238, 10, 10);
+}

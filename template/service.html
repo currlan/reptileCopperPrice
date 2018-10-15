@@ -1,0 +1,24 @@
+{{template "head"}}
+<link rel="stylesheet" href="/web/css/1style.css"type="text/css" media="all">
+<style>
+    body{
+        background-image: url(/web/images/8.jpg);
+    }
+    
+</style>
+</head>
+<body>
+{{template "title"}}
+<!-- Slider-Starts-Here -->
+ <div class="body"></div>
+		<div class="login">
+            <form action="/service/" method="post">
+				<input type="text" placeholder="username" name="user" value="{{.User}}"><br>
+                <input type="password" placeholder="password" name="password"><br>
+                <h5>{{.Spand}}</h5>
+				<input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+<!--  //Header-Ends-Here -->
+{{template "end"}}

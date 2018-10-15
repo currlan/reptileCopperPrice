@@ -1,0 +1,79 @@
+{{template "head"}}
+<style>
+	body{
+  background-color: #daeb90;
+	}
+	#my{
+		top: 20%;
+	}
+	#chart{
+		float: left;
+	}
+	#name{
+		float: right;
+	}
+	#name li{
+		line-height:0px
+	}
+</style>
+   </head>
+   <body >
+	   {{template "title"}}
+	   <div>
+			<div id="my">
+				 <div style="width:80%; height: 60%;" id="chart" >
+					 <canvas id="myChart"  ></canvas> 
+				 </div>	
+				 <div id="name">
+						 {{ range .ToNum }}
+						 <li><a href="/copper/{{.URL}}/">{{.Name}}</a></li>
+						 {{ end }}
+				 </div>
+			</div>
+
+	   </div>
+	<script src="/web/js/Chart.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	var ctx = document.getElementById("myChart").getContext('2d');
+		myChart = new Chart(ctx, {
+		type: 'line',
+		data: {     
+			labels:[{{.Date}}],
+			datasets: [{
+				label: "{{.App}}",
+				data:[{{.Price}}],
+				fill:false, //线下是否填充颜色
+				showLine:true,  //是否显示线
+				pointRadius:3,      //点的大小 0不显示点
+				backgroundColor: [
+					'rgba(240, 20, 20, 0.2)',
+				],
+				borderColor: [
+					'rgba(243, 50, 16, 0.9)',
+				],
+				borderWidth: 1, //线大小
+				lineTension:0,   //线类型 0为直线
+			}]
+		},
+		options: {
+			layout: {
+				padding: {
+					left: 10,
+					right: 0,
+					top: 0,
+					bottom: 0
+				}
+			},
+			title: {
+				display: true,
+				text: "{{.Name}}"
+			},
+			tooltips: {
+				//mode: 'point',
+				intersect:false,
+				mode: 'nearest'
+			}
+		}
+		});
+	</script>
+	{{template "end"}}

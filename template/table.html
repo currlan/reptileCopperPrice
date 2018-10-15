@@ -1,0 +1,52 @@
+{{template "head"}}
+<style>
+	body{
+		background: rgb(222, 243, 153);
+	}
+	#title{
+    width: 80%;
+    height: 60%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+	bottom: 0;
+		}
+	#title th{
+		width: 120px;
+	}
+	#title a{
+		color: rgb(16, 74, 235);
+	}
+</style>
+</head>
+<body>
+		{{template "title"}}
+		<div>
+			<div id="title">
+					<table border="1">
+						<tr>
+							<th>种类</th>
+							<th>名称</th>
+							<th>范围</th>
+							<th>均价</th>
+							<th>涨跌</th>
+							<th>单位</th>
+							<th>日期</th>
+						</tr>
+						{{ range .ToNum }}
+						<tr>
+							<th>{{.Category}}</th>
+							<th><a href="/copper/{{.URL}}/">{{.Name}}</a></th>
+							<th>{{.Orange}}</th>
+							<th>{{.Price}}</th>
+							<th>{{.Change}}</th>
+							<th>{{.Uint}}</th>
+							<th>{{.Date}}</th>
+						</a>
+						</tr>
+						{{ end }}
+					</table>
+			</div>
+		</div>
+		{{template "end"}}

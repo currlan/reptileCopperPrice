@@ -1,0 +1,26 @@
+copper
+
+create table if not exists product(     
+    orange  char(40) not null, 
+    price   char(40) not null,  
+    change1  char(40) not null,
+    date    char(40) not null  
+);
+
+product
+create table if not exists product(
+    name    char(50) not null,
+    orange  char(40) not null, 
+    price   char(40) not null,  
+    change1  char(40) not null,
+    date    char(40)   not null,
+     id int not null primary key auto_increment
+)DEFAULT CHARSET=utf8;
+
+username:
+create table if not exists username(
+    user    char(40)    not null,
+    pwd     char(40)    not null
+)DEFAULT CHARSET=utf8;
+
+alter table abc AUTO_INCREMENT=1;
